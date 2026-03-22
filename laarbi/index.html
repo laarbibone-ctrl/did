@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سوق المركبات المستعملة</title>
+    <style>
+        /* التنسيقات العامة */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* رأس الصفحة */
+        header {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: bold;
+        }
+
+        /* قسم الترحيب */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 { font-size: 3rem; margin-bottom: 10px; }
+
+        /* شبكة العرض */
+        .container {
+            padding: 40px 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #e74c3c;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        /* بطاقة المنتج */
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover { transform: translateY(-5px); }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content { padding: 20px; }
+        .card-content h3 { margin-top: 0; color: #2c3e50; }
+        .price { color: #e74c3c; font-size: 1.2rem; font-weight: bold; }
+        
+        .badge {
+            background: #eee;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        .btn {
+            display: block;
+            text-align: center;
+            background: #27ae60;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        footer {
+            background: #1a1a1a;
+            color: #ccc;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><h2>مركباتي.كوم</h2></div>
+        <nav>
+            <a href="#">الرئيسية</a>
+            <a href="#">سيارات</a>
+            <a href="#">دراجات</a>
+            <a href="#">أضف إعلانك</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>ابحث عن مركبتك القادمة</h1>
+        <p>أفضل الأسعار للسيارات والدراجات المستعملة</p>
+    </div>
+
+    <div class="container">
+        <center><h2 class="section-title">أحدث العروض</h2></center>
+        
+        <div class="grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=500&q=80" alt="سيارة">
+                <div class="card-content">
+                    <span class="badge">سيارة - موديل 2020</span>
+                    <h3>بورش 911 مستعملة</h3>
+                    <p class="price">150,000 ريال</p>
+                    <p>الممشى: 40,000 كم | الحالة: ممتازة</p>
+                    <a href="#" class="btn">تواصل مع البائع</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1558981403-c5f91cbcf523?auto=format&fit=crop&w=500&q=80" alt="دراجة">
+                <div class="card-content">
+                    <span class="badge">دراجة نارية - موديل 2022</span>
+                    <h3>هارلي ديفيدسون</h3>
+                    <p class="price">45,000 ريال</p>
+                    <p>الممشى: 5,000 كم | الحالة: كالجديدة</p>
+                    <a href="#" class="btn">تواصل مع البائع</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=500&q=80" alt="سيارة">
+                <div class="card-content">
+                    <span class="badge">سيارة - موديل 2018</span>
+                    <h3>تويوتا كامري</h3>
+                    <p class="price">65,000 ريال</p>
+                    <p>الممشى: 120,000 كم | الحالة: جيدة جداً</p>
+                    <a href="#" class="btn">تواصل مع البائع</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>حقوق النشر © 2026 مركباتي. جميع الحقوق محفوظة.</p>
+    </footer>
+
+</body>
+</html>
